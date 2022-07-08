@@ -24,8 +24,7 @@ jobs:
   publish-beta:
     executor: build-agent
     steps:
-      - attach_workspace:
-          at: /tmp/eslint-config
+      - checkout
       - run: printf "//`node -p \"require('url').parse(process.env.NPM_REGISTRY_URL || 'https://registry.npmjs.org').host\"`/:_authToken=${NPM_TOKEN}\nregistry=${NPM_REGISTRY_URL:-https://registry.npmjs.org}\n" > .npmrc
       - run: npm whoami
       - run: npm publish --access public beta
@@ -33,8 +32,7 @@ jobs:
   publish-latest:
     executor: build-agent
     steps:
-      - attach_workspace:
-          at: /tmp/eslint-config
+      - checkout
       - run: printf "//`node -p \"require('url').parse(process.env.NPM_REGISTRY_URL || 'https://registry.npmjs.org').host\"`/:_authToken=${NPM_TOKEN}\nregistry=${NPM_REGISTRY_URL:-https://registry.npmjs.org}\n" > .npmrc
       - run: npm whoami
       - run: npm publish --access public
