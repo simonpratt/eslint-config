@@ -7,19 +7,19 @@ executors:
     working_directory: /tmp/eslint-config
 
 jobs:
-  test-and-build:
-    executor: build-agent
-    steps:
-      - checkout
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run build
-      - persist_to_workspace:
-          root: /tmp/eslint-config
-          paths:
-            - dist
-            - bin
-            - package.json
+  # test-and-build:
+  #   executor: build-agent
+  #   steps:
+  #     - checkout
+  #     - run: npm ci
+  #     - run: npm run lint
+  #     - run: npm run build
+  #     - persist_to_workspace:
+  #         root: /tmp/eslint-config
+  #         paths:
+  #           - dist
+  #           - bin
+  #           - package.json
 
   publish-beta:
     executor: build-agent
@@ -42,10 +42,10 @@ jobs:
 workflows:
   development:
     jobs:
-      - test-and-build:
-          filters:
-            tags:
-              only: /.+/
+      # - test-and-build:
+      #     filters:
+      #       tags:
+      #         only: /.+/
       - publish-beta:
           requires:
             - test-and-build
