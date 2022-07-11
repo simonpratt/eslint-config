@@ -21,7 +21,7 @@ module.exports = {
     browser: true,
   },
   extends: ['@dtdot/eslint-config/base'],
-  ignorePatterns: ['node_modules', 'dist', '.prettierrc.js'],
+  ignorePatterns: ['node_modules', 'dist', '.prettierrc.js', '.eslintrc.js'],
 };
 ```
 
