@@ -4,7 +4,7 @@
 
 Install the peer dependencies via
 ```
-npm i --save-dev @trivago/prettier-plugin-sort-imports @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-prettier prettier 
+npm i --save-dev eslint @trivago/prettier-plugin-sort-imports @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-prettier prettier @dtdot/eslint-config
 ```
 
 ### Eslint
