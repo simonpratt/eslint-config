@@ -38,8 +38,6 @@ workflows:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+-.+$/
       - publish-latest:
           context: npm_publish
-          requires:
-            - test-and-build
           filters:
             branches:
               ignore: /.*/
