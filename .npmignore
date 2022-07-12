@@ -4,3 +4,4 @@
 .prettierrc.js
 package-lock.json
 src/
+build.js
