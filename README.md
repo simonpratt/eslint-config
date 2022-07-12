@@ -1,4 +1,16 @@
-## Usage
+## Usage - Quick setup
+
+Install the custom eslint config package as a dev depencency
+```
+npm i --save-dev @dtdot/eslint-config
+```
+
+Run the configuration utility to create your config files for you
+```
+npx eslint-setup
+```
+
+## Usage - Legacy manaul setup
 
 ### Peer Dependences
 
