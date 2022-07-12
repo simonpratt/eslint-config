@@ -11,4 +11,5 @@ const substitutedFile = setupFileString
   .replace('%% REACT_CONFIG %%', reactConfig.toString())
   .replace('%% PRETTIER_CONFIG %%', prettierConfig.toString());
 
+fs.mkdirSync('bin', { recursive: true });
 fs.writeFileSync('bin/setup.sh', substitutedFile);
