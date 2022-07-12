@@ -31,8 +31,6 @@ workflows:
     jobs:
       - publish-beta:
           context: npm_publish
-          requires:
-            - test-and-build
           filters:
             branches:
               ignore: /.*/
