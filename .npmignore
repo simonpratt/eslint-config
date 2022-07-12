@@ -3,3 +3,4 @@
 .npmignore
 .prettierrc.js
 package-lock.json
+src/

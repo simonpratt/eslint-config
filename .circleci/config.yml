@@ -7,24 +7,12 @@ executors:
     working_directory: /tmp/eslint-config
 
 jobs:
-  # test-and-build:
-  #   executor: build-agent
-  #   steps:
-  #     - checkout
-  #     - run: npm ci
-  #     - run: npm run lint
-  #     - run: npm run build
-  #     - persist_to_workspace:
-  #         root: /tmp/eslint-config
-  #         paths:
-  #           - dist
-  #           - bin
-  #           - package.json
 
   publish-beta:
     executor: build-agent
     steps:
       - checkout
+      - run: npm run build
       - run: printf "//`node -p \"require('url').parse(process.env.NPM_REGISTRY_URL || 'https://registry.npmjs.org').host\"`/:_authToken=${NPM_TOKEN}\nregistry=${NPM_REGISTRY_URL:-https://registry.npmjs.org}\n" > .npmrc
       - run: npm whoami
       - run: npm publish --access public beta
@@ -33,6 +21,7 @@ jobs:
     executor: build-agent
     steps:
       - checkout
+      - run: npm run build
       - run: printf "//`node -p \"require('url').parse(process.env.NPM_REGISTRY_URL || 'https://registry.npmjs.org').host\"`/:_authToken=${NPM_TOKEN}\nregistry=${NPM_REGISTRY_URL:-https://registry.npmjs.org}\n" > .npmrc
       - run: npm whoami
       - run: npm publish --access public
@@ -40,12 +29,10 @@ jobs:
 workflows:
   development:
     jobs:
-      # - test-and-build:
-      #     filters:
-      #       tags:
-      #         only: /.+/
       - publish-beta:
           context: npm_publish
+          requires:
+            - test-and-build
           filters:
             branches:
               ignore: /.*/
@@ -53,6 +40,8 @@ workflows:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+-.+$/
       - publish-latest:
           context: npm_publish
+          requires:
+            - test-and-build
           filters:
             branches:
               ignore: /.*/
