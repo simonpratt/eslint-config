@@ -1,7 +1,7 @@
 module.exports = {
   semi: true,
   singleQuote: true,
-  trailingComma: "all",
+  trailingComma: 'all",
   bracketSpacing: true,
   arrowParens: 'always',
   endOfLine: 'lf',
@@ -10,5 +10,6 @@ module.exports = {
   printWidth: 120,
   quoteProps: 'consistent',
   tabWidth: 2,
-  importOrder: ['react', '<THIRD_PARTY_MODULES>', '^@dtdot/(.*)$', '^[./]'],
+  importOrder: ['^react', '^@dtdot/(.*)$', '<THIRD_PARTY_MODULES>', '^[./]'],
+  importOrderSeparation: true,
 };
