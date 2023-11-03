@@ -13,7 +13,7 @@ npx eslint-setup
 <details>
   <summary>Legacy manual setup</summary>
   
-  ## Usage - Legacy manaul setup
+  ## Usage - Legacy manual setup
 
   ### Peer Dependences
 
