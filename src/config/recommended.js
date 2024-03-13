@@ -6,7 +6,6 @@ const reactRecommended = require('eslint-plugin-react/configs/recommended');
 module.exports = [
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  reactRecommended,
   prettierRecommended,
   {
     languageOptions: {
