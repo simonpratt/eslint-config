@@ -3,25 +3,28 @@
   "version": "0.0.8",
   "description": "My custom eslint config",
   "author": "Simon Pratt <19920260+simonpratt@users.noreply.github.com>",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "bin": {
     "eslint-setup": "bin/setup.sh"
   },
   "scripts": {
-    "build": "node build.js && chmod +x bin/setup.sh"
-  },
-  "dependencies": {
-    "@typescript-eslint/parser": "^5.17.0",
-    "eslint-config-prettier": "^8.5.0"
+    "build": "node scripts/build.js && chmod +x bin/setup.sh"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^3.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0",
-    "eslint": "^8.19.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.6.1"
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.0",
+    "prettier": "^3.2.5",
+    "typescript-eslint": "^7.2.0"
+  },
+  "peerDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.0",
+    "prettier": "^3.2.5",
+    "typescript-eslint": "^7.2.0"
   }
 }

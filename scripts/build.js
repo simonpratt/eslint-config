@@ -1,9 +1,9 @@
 const fs = require('fs');
 
-const setupFile = fs.readFileSync('src/setup.sh');
-const baseConfig = fs.readFileSync('src/example-config/base.js');
-const reactConfig = fs.readFileSync('src/example-config/react.js');
-const prettierConfig = fs.readFileSync('src/example-config/prettier.js');
+const setupFile = fs.readFileSync('src/scripts/setup.sh');
+const baseConfig = fs.readFileSync('src/templates/base.config.js');
+const reactConfig = fs.readFileSync('src/templates/react.config.js');
+const prettierConfig = fs.readFileSync('src/templates/prettier.config.js');
 
 const setupFileString = setupFile.toString();
 const substitutedFile = setupFileString
