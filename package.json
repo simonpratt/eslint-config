@@ -8,6 +8,13 @@
   "bin": {
     "eslint-setup": "bin/setup.sh"
   },
+  "files": [
+    "package.json",
+    "LICENCE.md",
+    "README.md",
+    "src",
+    "bin"
+  ],
   "scripts": {
     "build": "node scripts/build.js && chmod +x bin/setup.sh"
   },
