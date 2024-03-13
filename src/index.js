@@ -1,5 +1,5 @@
-const recommended = require('config/recommended');
-const react = require('config/react');
+const recommended = require('./config/recommended');
+const react = require('./config/react');
 
 module.exports = {
   eslint: {
