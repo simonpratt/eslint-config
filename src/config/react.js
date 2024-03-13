@@ -17,7 +17,5 @@ module.exports = [
         },
       },
     },
-    ignores: ['node_modules', 'dist', 'eslint.config.js', 'prettier.config.js'],
-    files: ['**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx'],
   },
 ];

@@ -11,7 +11,5 @@ module.exports = [
     languageOptions: {
       parser: tseslint.parser,
     },
-    ignores: ['node_modules', 'dist', 'eslint.config.js', 'prettier.config.js'],
-    files: ['**/*.js', '**/*.ts'],
   },
 ];
