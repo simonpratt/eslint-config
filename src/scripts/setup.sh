@@ -19,12 +19,12 @@ prettier_config="%% PRETTIER_CONFIG %%"
 
 # Copy prettier config across
 echo "Copying prettier config"
-echo "$prettier_config" > .prettierrc.js
+echo "$prettier_config" > prettier.config.js
 
 # Copy the correct eslint config
 echo "Copying eslint config"
 if [ "$setup_react_rules" == "y" ]; then
-    echo "$react_config" > .eslintrc.js
+    echo "$react_config" > eslint.config.js
 else
-    echo "$base_config" > .eslintrc.js
+    echo "$base_config" > eslint.config.js
 fi
