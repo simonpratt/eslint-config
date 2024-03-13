@@ -1,6 +1,6 @@
 {
   "name": "@dtdot/eslint-config",
-  "version": "0.0.9-0",
+  "version": "0.0.9-1",
   "description": "My custom eslint config",
   "author": "Simon Pratt <19920260+simonpratt@users.noreply.github.com>",
   "main": "src/index.js",
