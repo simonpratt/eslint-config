@@ -19,12 +19,7 @@ npx eslint-setup
 
   Install the peer dependencies via
   ```
-  npm i --save-dev @trivago/prettier-plugin-sort-imports @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-prettier prettier @dtdot/eslint-config
-  ```
-
-  If using the react config, install the following packages too
-  ```
-  npm i --save-dev eslint-plugin-react eslint-plugin-react-hooks
+  npm i --save-dev eslint prettier @dtdot/eslint-config
   ```
 
   ### Eslint
