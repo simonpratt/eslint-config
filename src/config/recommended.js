@@ -11,5 +11,8 @@ module.exports = [
     languageOptions: {
       parser: tseslint.parser,
     },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+    }
   },
 ];
