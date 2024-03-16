@@ -64,7 +64,6 @@ else
     echo "$base_config" > "$eslint_config_file"
 fi
 
-# Info
-echo "Instalation complete!"
-echo ""
-echo "!!Important!! Please update your lint script to just run "eslint" without specifying extnesions"
+# Update package.json with a new lint command
+echo "Updating package.json with new lint command"
+sed -i '' 's/"lint": ".*"/"lint": "eslint"/' package.json
