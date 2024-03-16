@@ -7,7 +7,7 @@ npm i --save-dev @dtdot/eslint-config
 
 Run the configuration utility to create your config files for you
 ```
-npx eslint-setup
+npx -p @dtdot/eslint-config eslint-setup
 ```
 
 <details>

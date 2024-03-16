@@ -30,7 +30,7 @@ fi
 read -p "Do you need react eslint rules? [y/n]: " setup_react_rules;
 
 echo "Installing core linting dependencies"
-npm i --save-dev eslint prettier
+npm i --save-dev @dtdot/eslint-config eslint prettier
 
 # Placeholder values
 # The file contents gets substituted in here at build
@@ -43,13 +43,13 @@ prettier_config="%% PRETTIER_CONFIG %%"
 if grep -q '"type": "module"' package.json; then
     echo "Detected type module in package.json"
     echo "Using .cjs file extension for eslint and prettier config files"
-    eslint_config_file=".eslintrc.cjs"
-    prettier_config_file=".prettierrc.cjs"
+    eslint_config_file="eslint.config.cjs"
+    prettier_config_file="prettier.config.cjs"
 else
     echo "No type module detected in package.json"
     echo "Using .js file extension for eslint and prettier config files"
-    eslint_config_file=".eslintrc.js"
-    prettier_config_file=".prettierrc.js"
+    eslint_config_file="eslint.config.js"
+    prettier_config_file="prettier.config.js"
 fi
 
 # Copy prettier config across
