@@ -1,6 +1,6 @@
 ## Usage - Quick setup
 
-Install the custom eslint config package as a dev depencency
+Install the custom eslint config package as a dev dependency
 ```
 npm i -D @dtdot/eslint-config
 ```
