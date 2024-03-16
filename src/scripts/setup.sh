@@ -66,4 +66,4 @@ fi
 
 # Update package.json with a new lint command
 echo "Updating package.json with new lint command"
-sed -i '' 's/"lint": ".*"/"lint": "eslint"/' package.json
+sed -i '' 's/"lint": ".*"/"lint": "eslint ."/' package.json
