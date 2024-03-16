@@ -32,13 +32,14 @@ read -p "Do you need react eslint rules? [y/n]: " setup_react_rules;
 echo "Installing core linting dependencies"
 npm i --save-dev eslint prettier
 
+# Placeholder values
+# The file contents gets substituted in here at build
+# Substituting was easier than finding the files within node modules at run time
 base_config="%% BASE_CONFIG %%"
 react_config="%% REACT_CONFIG %%"
 prettier_config="%% PRETTIER_CONFIG %%"
 
-# Check to see if package.json has "type": "module"
-# Use this check to define some variables that we can use for the destination file name
-# If module is present we should use the .cjs extnestion rather than .js
+# Check to see if we should use .cjs or .js file extension
 if grep -q '"type": "module"' package.json; then
     echo "Detected type module in package.json"
     echo "Using .cjs file extension for eslint and prettier config files"
@@ -62,3 +63,8 @@ if [ "$setup_react_rules" == "y" ]; then
 else
     echo "$base_config" > "$eslint_config_file"
 fi
+
+# Info
+echo "Instalation complete!"
+echo ""
+echo "!!Important!! Please update your lint script to just run "eslint" without specifying extnesions"
