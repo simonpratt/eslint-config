@@ -65,5 +65,5 @@ else
 fi
 
 # Update package.json with a new lint command
-echo "Updating package.json with new lint command"
+echo "Updating package.json with new lint command, update the target directory as needed"
 sed -i '' 's/"lint": ".*"/"lint": "eslint ."/' package.json
